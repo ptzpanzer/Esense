@@ -9,51 +9,36 @@
         android:id="@+id/connectButton"
         android:layout_width="110dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/custom_button"
-        android:drawableLeft="@drawable/bluetooth"
+        android:layout_marginStart="16dp"
         android:drawablePadding="8dp"
         android:text="Connect"
         android:textAllCaps="false"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/deviceNameTV"
+        app:layout_constraintTop_toTopOf="@+id/deviceNameTV" />
 
     <TextView
         android:id="@+id/deviceNameTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
         android:text="eSense-device"
         android:textColor="#000000"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/connectionTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
         android:text="Disconnected"
-        app:layout_constraintBottom_toBottomOf="@+id/connectButton"
         app:layout_constraintEnd_toEndOf="@+id/deviceNameTV"
-        app:layout_constraintStart_toStartOf="@+id/deviceNameTV" />
-
-    <ImageView
-        android:id="@+id/statusImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/connectionTV"
-        app:layout_constraintEnd_toStartOf="@+id/deviceNameTV"
-        app:layout_constraintTop_toTopOf="@+id/deviceNameTV"
-        app:srcCompat="@drawable/disconnected" />
+        app:layout_constraintStart_toStartOf="@+id/deviceNameTV"
+        app:layout_constraintTop_toBottomOf="@+id/deviceNameTV" />
 
     <View
         android:id="@+id/view4"
@@ -62,152 +47,256 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/connectButton" />
 
     <TextView
-        android:id="@+id/activitiesTV"
+        android:id="@+id/initTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="Activities"
+        android:text="Initialization"
         android:textColor="#000000"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/headShakeButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view4" />
+        app:layout_constraintTop_toBottomOf="@+id/startStopButton" />
 
-    <Button
-        android:id="@+id/speakingButton"
-        android:layout_width="110dp"
+    <TextView
+        android:id="@+id/bgTV"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/custom_button"
-        android:drawableLeft="@drawable/speaking"
+        android:text="Scenario"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/initButton1" />
+
+    <TextView
+        android:id="@+id/acTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Gesture"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/runButton" />
+
+    <TextView
+        android:id="@+id/LabelTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Labeling"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/startStopButton"
+        app:layout_constraintStart_toStartOf="@+id/startStopButton"
+        app:layout_constraintTop_toBottomOf="@+id/activityTV" />
+
+    <TextView
+        android:id="@+id/RecordTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recording"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/recordButton"
+        app:layout_constraintStart_toStartOf="@+id/recordButton"
+        app:layout_constraintTop_toBottomOf="@+id/activityTV" />
+
+    <Button
+        android:id="@+id/initButton1"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:drawablePadding="8dp"
-        android:text="Speaking"
+        android:text="INIT Step1"
         android:textAllCaps="false"
-        android:textSize="14sp"
+        android:textSize="10sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/headShakeButton" />
+        app:layout_constraintTop_toBottomOf="@+id/initTV" />
 
     <Button
-        android:id="@+id/eatingButton"
-        android:layout_width="110dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:id="@+id/initButton2"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/custom_button"
-        android:drawableLeft="@drawable/eat"
         android:drawablePadding="8dp"
-        android:text="Eating"
+        android:text="INIT Step2"
         android:textAllCaps="false"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/noddingButton" />
-
-    <Button
-        android:id="@+id/noddingButton"
-        android:layout_width="110dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/custom_button"
-        android:drawableLeft="@drawable/nodding"
-        android:text="Nodding"
-        android:textAllCaps="false"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/speakingButton" />
-
-    <Button
-        android:id="@+id/headShakeButton"
-        android:layout_width="110dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/custom_button"
-        android:drawableLeft="@drawable/headshake"
-        android:text="Head Shake"
-        android:textAllCaps="false"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view4" />
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/initButton1"
+        app:layout_constraintTop_toBottomOf="@+id/initTV" />
 
     <Button
         android:id="@+id/stayButton"
-        android:layout_width="110dp"
-        android:layout_height="wrap_content"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/custom_button"
-        android:drawableLeft="@drawable/stay"
         android:text="Stay"
         android:textAllCaps="false"
-        android:textSize="14sp"
+        android:textSize="10sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/walkButton" />
-
-    <Button
-        android:id="@+id/speak_walk_button"
-        android:layout_width="110dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/custom_button"
-        android:drawableLeft="@drawable/walk"
-        android:text="Speak and Walk"
-        android:textAllCaps="false"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/stayButton" />
+        app:layout_constraintTop_toBottomOf="@+id/bgTV" />
 
     <Button
         android:id="@+id/walkButton"
-        android:layout_width="110dp"
-        android:layout_height="wrap_content"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="Walk"
+        android:textAllCaps="false"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/stayButton"
+        app:layout_constraintTop_toBottomOf="@+id/bgTV" />
+
+    <Button
+        android:id="@+id/runButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="Run"
+        android:textAllCaps="false"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/walkButton"
+        app:layout_constraintTop_toBottomOf="@+id/bgTV" />
+
+    <Button
+        android:id="@+id/upStairsButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="Customize"
+        android:textAllCaps="false"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/runButton"
+        app:layout_constraintTop_toBottomOf="@+id/bgTV" />
+
+    <Button
+        android:id="@+id/headShakeLeftButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/custom_button"
-        android:drawableLeft="@drawable/walk"
-        android:text="Walking"
+        android:text="Shake Left"
         android:textAllCaps="false"
-        android:textSize="14sp"
+        android:textSize="10sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eatingButton" />
+        app:layout_constraintTop_toBottomOf="@+id/acTV" />
+
+    <Button
+        android:id="@+id/headShakeRightButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="Shake Right"
+        android:textAllCaps="false"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/headShakeLeftButton"
+        app:layout_constraintTop_toBottomOf="@+id/acTV" />
+
+    <Button
+        android:id="@+id/headNodUpButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="Nod Up"
+        android:textAllCaps="false"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/headShakeRightButton"
+        app:layout_constraintTop_toBottomOf="@+id/acTV" />
+
+    <Button
+        android:id="@+id/headNodDownButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="Nod Down"
+        android:textAllCaps="false"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/headNodUpButton"
+        app:layout_constraintTop_toBottomOf="@+id/acTV" />
+
+    <Button
+        android:id="@+id/headYawLeftButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="Yaw Left"
+        android:textAllCaps="false"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/headNodDownButton"
+        app:layout_constraintTop_toBottomOf="@+id/acTV" />
+
+    <Button
+        android:id="@+id/headYawRightButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="Yaw Right"
+        android:textAllCaps="false"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/headYawLeftButton"
+        app:layout_constraintTop_toBottomOf="@+id/acTV" />
 
     <TextView
         android:id="@+id/activityTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="4dp"
         android:text="Activity"
-        android:textColor="#4CAF50"
+        android:textColor="#0F3CE6"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/activitiesTV"
-        app:layout_constraintEnd_toEndOf="@+id/chronometer"
-        app:layout_constraintStart_toStartOf="@+id/chronometer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view4" />
 
     <Chronometer
         android:id="@+id/chronometer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="8dp"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/speakingButton"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/recordButton"
+        app:layout_constraintStart_toStartOf="@+id/recordButton"
+        app:layout_constraintTop_toBottomOf="@+id/recordButton" />
+
+    <ListView
+        android:id="@+id/activityListView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activityhistoryTV"></ListView>
 
     <TextView
         android:id="@+id/activityhistoryTV"
@@ -215,56 +304,41 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="Activity History"
+        android:text="Record History"
         android:textColor="#000000"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/noddingButton"
-        app:layout_constraintTop_toBottomOf="@+id/speakingButton" />
-
-    <ListView
-        android:id="@+id/activityListView"
-        android:layout_width="250dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/noddingButton"
-        app:layout_constraintTop_toBottomOf="@+id/activityhistoryTV" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headShakeLeftButton" />
 
     <ToggleButton
         android:id="@+id/recordButton"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="72dp"
         android:background="@drawable/start"
         android:focusable="false"
         android:focusableInTouchMode="false"
         android:text="Record"
         android:textOff=""
         android:textOn=""
-        app:layout_constraintBottom_toTopOf="@+id/chronometer"
-        app:layout_constraintEnd_toEndOf="@+id/chronometer"
-        app:layout_constraintHorizontal_bias="0.486"
-        app:layout_constraintStart_toStartOf="@+id/chronometer"
-        app:layout_constraintTop_toBottomOf="@+id/activityTV"
-        app:layout_constraintVertical_bias="0.566" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RecordTV" />
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+    <ToggleButton
+        android:id="@+id/startStopButton"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="72dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/statusImage"
-        app:layout_constraintStart_toEndOf="@+id/connectButton"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="@drawable/start"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:text="Start"
+        android:textOff=""
+        android:textOn=""
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LabelTV" />
 
 </android.support.constraint.ConstraintLayout>
