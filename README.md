@@ -2,7 +2,7 @@
  
 This app is used to collect IMU data of head motions using eSense earbuds.
 
-<img height="150" src="https://github.com/ptzpanzer/Esense/blob/Data_Collection/IMG/Screenshot_dc.jpg"/>
+<img height="750" src="https://github.com/ptzpanzer/Esense/blob/Data_Collection/IMG/Screenshot_dc.jpg"/>
 
 How to use?
 - Link eSense earbuds to your cellphone using Bluetooth.
