@@ -1,29 +1,13 @@
-# Esense
+# Esense_Exercise
 
-This is an Android application. The app establishes connection with a Bluetooth Low Energy (BLE) earble device named [eSense](http://www.esense.io/). The device is developed by NOKIA Bell Labs Cambridge. <br/>
-![](images/esensedevice.png)
-<br/>The device contains sensor which provides accelerometer and gyroscope data. From this data hand and mouth related activities like eating, swallowing, speaking, head shaking etc. can be recognized by machine learning algorithms like CNN, LSTM.
+This APP is used for testing the CNN_LSTM head motion recognition pipeline.
 
-# IDE
-
-- **Android Studio**
-
-# Architecture
-- The eSense device gets connected with mobile via Bluetooth. Once the connection gets established, the sensor data is recorded.
-![](images/architecture.png)
-
-# Application Overview
-- Clicking the **Connect** button user connects eSense device with mobile
-- After selecting any **activity** , if user click **Start** icon the data will start to be recorded
-- Clikcing the **Stop** icon will save the recorded data in mobile
-- User can also see the recorded activity history
-![](images/appoverview.png)
-
-# Data Collection
-From the earable device 3 types of data can be collected.
-  - **Audio**
-  - **Accelerometer**
-  - **Gyroscope**
-
-The accelerometer and gyroscope data is saved in mobile storage as **.csv** format. On the other hand audio data is saved as **.3gpp** format in mobile storage.
-![](images/datatype.png)
+How to use?
+- Link eSense earbuds to your cellphone using Bluetooth.
+- Press 'Connect' Button, type the device name of your eSense earbuds.
+- Place the earbud still, press 'INIT Step1', then switch the blue button on for about 2 seconds, then switch it off.
+- Take on the earbud, press 'INIT Step2', then look straight forward, switch the blue button on for about 2 seconds, then switch it off.
+- Press 'INIT Step2', then raise your head up at any angle and keep steady, switch the blue button on for about 2 seconds, then switch it off.
+- Press 'Work' and switch the blue button on.
+- The APP will give random orders, you can do head motions following these orders.
+- Switch the blue button off to stop testing, you are able to check the result after that. 
