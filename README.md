@@ -2,6 +2,8 @@
 
 This APP is used for testing the CNN_LSTM head motion recognition pipeline.
 
+<img height="750" src="https://github.com/ptzpanzer/Esense/blob/Call_Button/IMG/Screenshot_cb.jpg"/>
+
 How to use?
 - Link eSense earbuds to your cellphone using Bluetooth.
 - Press 'Connect' Button, type the device name of your eSense earbuds.
