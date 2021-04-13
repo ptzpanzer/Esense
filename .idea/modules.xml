@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Esense.iml" filepath="$PROJECT_DIR$/.idea/modules/Esense.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Esense.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Esense.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Esense_DataCollection.iml" filepath="$PROJECT_DIR$/.idea/modules/Esense_DataCollection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Esense_DataCollection.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Esense_DataCollection.app.iml" />
     </modules>
   </component>
 </project>
